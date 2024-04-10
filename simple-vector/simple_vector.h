@@ -147,14 +147,14 @@ public:
     // Возвращает ссылку на элемент с индексом index
     Type& operator[](size_t index) noexcept
     {
-        assert(size_ != 0);
+        assert(index < size_);
         return items_[index];
     }
 
     // Возвращает константную ссылку на элемент с индексом index
     const Type& operator[](size_t index) const noexcept
     {
-        assert(size_ != 0);
+        assert(index < size_);
         return items_[index];
     }
 
